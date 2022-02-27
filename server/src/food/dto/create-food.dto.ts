@@ -1,0 +1,25 @@
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator'
+import { InputType, Field, Float, Int } from '@nestjs/graphql'
+
+@InputType()
+export class CreateFoodDto {
+  @Field()
+  @IsNotEmpty({ message: 'Must specify food name' })
+  @IsString({ message: 'Name must be of type String' })
+  name: string
+
+  @Field()
+  @IsNotEmpty({ message: 'Must specify restaurant name' })
+  @IsString({ message: 'Restaurant name must be of type String' })
+  restaurant: string
+
+  @Field(() => Float)
+  @IsNotEmpty({ message: 'Must specify price of food' })
+  @IsNumber({}, { message: 'Price of food must be of type Float' })
+  price: number
+
+  @Field(() => Int)
+  @IsNotEmpty({ message: 'Must specify category id of food' })
+  @IsNumber({}, { message: 'Category id must be of type Int' })
+  categoryId: number
+}

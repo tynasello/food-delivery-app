@@ -1,0 +1,99 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Category {
+  id: Int!
+  name: String!
+  food: [Food!]
+}
+
+type Food {
+  id: Int!
+  name: String!
+  restaurant: String!
+  price: Float!
+  category: Category!
+  categoryId: Int!
+}
+
+type User {
+  id: Int!
+  username: String!
+  password: String!
+  address: String!
+  cartCount: String!
+  rt: String!
+  cart: [Food!]
+}
+
+type LoginSignupResponse {
+  id: Int!
+  username: String!
+  address: String!
+  cart: [Food!]
+  cartCount: String!
+  at: String!
+  rt: String!
+}
+
+type LogoutResponse {
+  username: String!
+}
+
+type RefreshResponse {
+  at: String!
+}
+
+type Query {
+  getUser: User!
+  getFoods: [Food!]!
+  getFood(foodId: Int!): Food!
+  getCategories: [Category!]!
+  getCategory(categoryId: Int!): Category!
+}
+
+type Mutation {
+  updateUser(updateUserInput: UpdateUserDto!): User!
+  updateUserAddFoodToCart(updateCartInput: UpdateUserCartDto!): User!
+  updateUserRemoveFoodFromCart(updateCartInput: UpdateUserCartDto!): User!
+  deleteUser: User!
+  signup(createUserInput: CreateUserDto!): LoginSignupResponse!
+  login(loginInput: LoginDto!): LoginSignupResponse!
+  logout: LogoutResponse!
+  refreshTokens: RefreshResponse!
+  createFood(createFoodInput: CreateFoodDto!): Food!
+  deleteFood(foodId: Int!): Food!
+  createCategory(createCategoryInput: CreateCategoryDto!): Category!
+  deleteCategory(categoryId: Int!): Category!
+}
+
+input UpdateUserDto {
+  address: String
+}
+
+input UpdateUserCartDto {
+  foodId: Int
+}
+
+input CreateUserDto {
+  username: String!
+  password: String!
+  address: String!
+}
+
+input LoginDto {
+  username: String!
+  password: String!
+}
+
+input CreateFoodDto {
+  name: String!
+  restaurant: String!
+  price: Float!
+  categoryId: Int!
+}
+
+input CreateCategoryDto {
+  name: String!
+}
