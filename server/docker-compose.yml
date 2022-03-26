@@ -1,16 +1,46 @@
 version: '3.8'
 services:
-  nest-api:
-    container_name: nest-api
+  dev:
+    container_name: nestjs_api_dev
+    image: nestjs-api-dev:1.0.0
     build:
       context: .
-      dockerfile: Dockerfile
+      target: development
+      dockerfile: ./Dockerfile
+    command: npm run start:debug
     ports:
       - 3001:3001
     depends_on:
       - postgres
     env_file:
       - .env
+    networks:
+      - nesjs-network
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
+
+  prod:
+    container_name: nestjs_api_prod
+    image: nestjs-api-prod:1.0.0
+    build:
+      context: .
+      target: production
+      dockerfile: ./Dockerfile
+    command: npm run start:prod
+    ports:
+      - 3001:3001
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    networks:
+      - nesjs-network
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
 
   postgres:
     image: postgres:13
@@ -26,3 +56,5 @@ services:
 volumes:
   postgres:
     name: nest-db
+networks:
+  nesjs-network:
