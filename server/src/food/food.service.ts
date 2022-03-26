@@ -1,7 +1,7 @@
 import { UserInputError } from 'apollo-server-express'
 import { CategoryService } from '../categories/category.service'
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/prisma.service'
+import { PrismaService } from './../prisma.service'
 import { CreateFoodDto } from './dto'
 
 @Injectable()
