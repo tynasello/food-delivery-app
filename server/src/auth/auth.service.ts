@@ -29,7 +29,7 @@ export class AuthService {
 
     // create at and rt for user and then upsert rt to user table in db
     const tokens = await this.createTokens(newUser)
-    this.upsertRt(newUser.username, tokens.rt)
+    await this.upsertRt(newUser.username, tokens.rt)
 
     return { ...newUser, ...tokens }
   }
@@ -43,7 +43,7 @@ export class AuthService {
       )
     // create at and rt for user and then upsert rt to user table in db
     const tokens = await this.createTokens(user)
-    this.upsertRt(user.username, tokens.rt)
+    await this.upsertRt(user.username, tokens.rt)
     return { ...user, ...tokens }
   }
 

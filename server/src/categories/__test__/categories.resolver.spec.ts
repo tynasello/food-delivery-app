@@ -2,7 +2,7 @@ import { CategoryService } from '../category.service'
 import { CategoryResolver } from '../category.resolver'
 import { Test, TestingModule } from '@nestjs/testing'
 
-describe('FoodResolver', () => {
+describe('CategoryResolver', () => {
   let categoryResolver: CategoryResolver
 
   const categoryServiceMock = {

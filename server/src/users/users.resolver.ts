@@ -1,7 +1,7 @@
 import { Resolver, Query, Mutation, Args, Context } from '@nestjs/graphql'
 import { UsersService } from './users.service'
 import { UseGuards } from '@nestjs/common'
-import { JwtAuthGuard } from 'src/common/guards'
+import { JwtAuthGuard } from '../common/guards'
 import { UpdateUserCartDto, UpdateUserDto } from './dto'
 import { User } from './models'
 
@@ -41,7 +41,7 @@ export class UsersResolver {
 
   @Mutation(() => User, { name: 'updateUserRemoveFoodFromCart' })
   @UseGuards(JwtAuthGuard)
-  updateUserRemoveFoodToCart(
+  updateUserRemoveFoodFromCart(
     @Context() context: any,
     @Args('updateCartInput') updateCartInput: UpdateUserCartDto
   ) {

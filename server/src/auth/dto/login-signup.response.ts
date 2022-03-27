@@ -1,6 +1,5 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql'
-import { Food } from 'src/food/models'
-
+import { Food } from '../../food/models'
 @ObjectType()
 export class LoginSignupResponse {
   @Field(() => Int)

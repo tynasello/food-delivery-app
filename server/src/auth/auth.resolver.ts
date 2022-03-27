@@ -1,4 +1,3 @@
-import { Tokens } from '../types/tokent.type'
 import { CreateUserDto } from '../users/dto/create-user.dto'
 import { AuthService } from './auth.service'
 import { Args, Context, Mutation, Resolver } from '@nestjs/graphql'

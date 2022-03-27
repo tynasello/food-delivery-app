@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing'
 import { PrismaService } from '../../prisma.service'
 import { CategoryService } from '../category.service'
 
-describe('FoodService', () => {
+describe('CategoryService', () => {
   let categoryService: CategoryService
 
   const mockPrismaService = {

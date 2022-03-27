@@ -16,13 +16,11 @@ export class UsersService {
   }
 
   create = async (createUserInput: CreateUserDto) => {
-    if (await this.findOneByUsername(createUserInput.username))
-      throw new UserInputError(
-        `User with this username ${createUserInput.username} already exists`
-      )
+    await this.findOne(createUserInput.username)
 
     return this.prisma.user.create({
       data: createUserInput,
+      include: this.includeRelations,
     })
   }
 
@@ -134,15 +132,5 @@ export class UsersService {
     return this.prisma.user.delete({
       where: { username },
     })
-  }
-
-  // helpers
-
-  findOneByUsername = async (username: string) => {
-    const category = await this.prisma.user.findUnique({
-      where: { username },
-      include: this.includeRelations,
-    })
-    return category
   }
 }
