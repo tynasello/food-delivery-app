@@ -1,11 +1,10 @@
 version: '3.8'
 services:
-  dev:
-    container_name: nestjs_api_dev
-    image: nestjs-api-dev:1.0.0
+  fda_api:
+    container_name: fda_api
+    image: fda_api:1.0.0
     build:
       context: .
-      target: development
       dockerfile: ./Dockerfile
     command: npm run start:debug
     ports:
@@ -15,46 +14,26 @@ services:
     env_file:
       - .env
     networks:
-      - nesjs-network
+      - fda_network
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     restart: unless-stopped
 
-  prod:
-    container_name: nestjs_api_prod
-    image: nestjs-api-prod:1.0.0
-    build:
-      context: .
-      target: production
-      dockerfile: ./Dockerfile
-    command: npm run start:prod
-    ports:
-      - 3001:3001
-    depends_on:
-      - postgres
-    env_file:
-      - .env
-    networks:
-      - nesjs-network
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    restart: unless-stopped
-
-  postgres:
+  fda_db:
     image: postgres:13
-    container_name: postgres
+    container_name: fda_db
     restart: always
     ports:
       - 5432:5432
     env_file:
       - .env
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - fda_db:/var/lib/postgresql/data
 
 volumes:
-  postgres:
-    name: nest-db
+  fda_db:
+    name: fda_db
 networks:
-  nesjs-network:
+  fda_network:
+    name: fda_network
