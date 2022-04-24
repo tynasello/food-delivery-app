@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import { FoodResolver } from './../food.resolver'
 import { FoodService } from '../food.service'
+import { FoodResolver } from './../food.resolver'
 
 describe('FoodResolver', () => {
   let foodResolver: FoodResolver

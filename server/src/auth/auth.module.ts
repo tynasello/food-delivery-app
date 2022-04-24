@@ -1,12 +1,12 @@
-import { PrismaService } from './../prisma.service'
-import { RtStrategy } from '../common/strategies/rt.strategy'
-import { AtStrategy } from '../common/strategies/at.strategy'
-import { UsersModule } from './../users/users.module'
 import { Module } from '@nestjs/common'
-import { AuthService } from './auth.service'
-import { AuthResolver } from './auth.resolver'
-import { PassportModule } from '@nestjs/passport'
 import { JwtModule } from '@nestjs/jwt'
+import { PassportModule } from '@nestjs/passport'
+import { AtStrategy } from '../common/strategies/at.strategy'
+import { RtStrategy } from '../common/strategies/rt.strategy'
+import { PrismaService } from './../prisma.service'
+import { UsersModule } from './../users/users.module'
+import { AuthResolver } from './auth.resolver'
+import { AuthService } from './auth.service'
 
 @Module({
   imports: [PassportModule, UsersModule, JwtModule.register({})],

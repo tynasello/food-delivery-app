@@ -1,7 +1,7 @@
-import { FoodService } from './../food/food.service'
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from './../prisma.service'
 import { UserInputError } from 'apollo-server-express'
+import { FoodService } from './../food/food.service'
+import { PrismaService } from './../prisma.service'
 import { CreateUserDto, UpdateUserCartDto, UpdateUserDto } from './dto'
 
 @Injectable()
@@ -16,7 +16,15 @@ export class UsersService {
   }
 
   create = async (createUserInput: CreateUserDto) => {
-    await this.findOne(createUserInput.username)
+    if (
+      await this.prisma.user.findUnique({
+        where: { username: createUserInput.username },
+        include: this.includeRelations,
+      })
+    )
+      throw new UserInputError(
+        `User with username ${createUserInput.username} already exists`
+      )
 
     return this.prisma.user.create({
       data: createUserInput,

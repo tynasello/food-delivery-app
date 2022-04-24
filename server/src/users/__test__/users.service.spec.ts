@@ -1,11 +1,11 @@
+import { Test, TestingModule } from '@nestjs/testing'
 import { UserInputError } from 'apollo-server-express'
+import { PrismaService } from '../../prisma.service'
 import { FoodService } from './../../food/food.service'
 import { UsersService } from './../users.service'
-import { Test, TestingModule } from '@nestjs/testing'
-import { PrismaService } from '../../prisma.service'
 
 describe('UsersService', () => {
-  let spy: jest.SpyInstance<any>
+  let spy: jest.SpyInstance
 
   let usersService: UsersService
 
@@ -58,7 +58,7 @@ describe('UsersService', () => {
 
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(false)
           })
@@ -174,7 +174,7 @@ describe('UsersService', () => {
 
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(mockFindOneUserResponse)
           })
@@ -218,7 +218,7 @@ describe('UsersService', () => {
 
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(mockFindOneUserResponse)
           })
@@ -253,7 +253,7 @@ describe('UsersService', () => {
 
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(mockFindOneUserResponse)
           })
@@ -293,7 +293,7 @@ describe('UsersService', () => {
 
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(mockFindOneUserResponse)
           })
@@ -316,7 +316,7 @@ describe('UsersService', () => {
     it('should remove a user', async () => {
       spy = jest.spyOn(usersService, 'findOne').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             // @ts-ignore
             resolve(false)
           })

@@ -1,12 +1,12 @@
 import { JwtService } from '@nestjs/jwt'
-import { AuthService } from './../auth.service'
 import { Test, TestingModule } from '@nestjs/testing'
+import * as bcrypt from 'bcrypt'
 import { PrismaService } from '../../prisma.service'
 import { UsersService } from '../../users/users.service'
-import * as bcrypt from 'bcrypt'
+import { AuthService } from './../auth.service'
 
 describe('AuthService', () => {
-  let spy: jest.SpyInstance<any>
+  let spy: jest.SpyInstance
 
   let authService: AuthService
 
@@ -67,7 +67,7 @@ describe('AuthService', () => {
 
       spy = jest.spyOn(authService, 'createTokens').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             resolve(mockCreateTokensResponse)
           })
       )
@@ -117,7 +117,7 @@ describe('AuthService', () => {
 
       spy = jest.spyOn(authService, 'createTokens').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             resolve(mockCreateTokensResponse)
           })
       )
@@ -184,7 +184,7 @@ describe('AuthService', () => {
       }
       spy = jest.spyOn(authService, 'refreshAt').mockImplementation(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             resolve(mockRefreshAtResponse.at)
           })
       )

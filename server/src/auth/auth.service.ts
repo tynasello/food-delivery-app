@@ -1,13 +1,13 @@
-import { UsersService } from './../users/users.service'
 import { Injectable } from '@nestjs/common'
-import { User } from 'src/users/models/user.model'
 import { JwtService } from '@nestjs/jwt'
-import * as bcrypt from 'bcrypt'
-import { PrismaService } from './../prisma.service'
-import { CreateUserDto } from 'src/users/dto'
-import { LoginSignupResponse, LogoutResponse, RefreshResponse } from './dto'
 import { AuthenticationError } from 'apollo-server-express'
+import * as bcrypt from 'bcrypt'
 import { Tokens } from 'src/types'
+import { User } from 'src/users/models/user.model'
+import { CreateUserDto } from '../../src/users/dto'
+import { PrismaService } from './../prisma.service'
+import { UsersService } from './../users/users.service'
+import { LoginSignupResponse, LogoutResponse, RefreshResponse } from './dto'
 
 @Injectable()
 export class AuthService {

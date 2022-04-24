@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing'
+import { CategoryService } from '../../categories/category.service'
 import { PrismaService } from '../../prisma.service'
 import { FoodService } from '../food.service'
-import { CategoryService } from '../../categories/category.service'
 
 describe('FoodService', () => {
   let foodService: FoodService
@@ -10,7 +10,7 @@ describe('FoodService', () => {
     food: {
       create: jest.fn(),
       findMany: jest.fn(),
-      findUnique: jest.fn((foodId) => true),
+      findUnique: jest.fn(() => true),
       delete: jest.fn(),
     },
     $queryRaw: jest.fn(),

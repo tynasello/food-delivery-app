@@ -20,10 +20,8 @@ type Food {
 type User {
   id: Int!
   username: String!
-  password: String!
   address: String!
   cartCount: String!
-  rt: String!
   cart: [Food!]
 }
 

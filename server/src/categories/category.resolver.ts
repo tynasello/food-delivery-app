@@ -1,4 +1,4 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql'
+import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql'
 import { CategoryService } from './category.service'
 import { CreateCategoryDto } from './dto'
 import { Category } from './models'

@@ -1,6 +1,6 @@
-import { CategoryService } from '../category.service'
-import { CategoryResolver } from '../category.resolver'
 import { Test, TestingModule } from '@nestjs/testing'
+import { CategoryResolver } from '../category.resolver'
+import { CategoryService } from '../category.service'
 
 describe('CategoryResolver', () => {
   let categoryResolver: CategoryResolver

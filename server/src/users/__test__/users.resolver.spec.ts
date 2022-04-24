@@ -1,7 +1,7 @@
-import { UsersService } from './../users.service'
-import { UsersResolver } from './../users.resolver'
 import { Test, TestingModule } from '@nestjs/testing'
 import { JwtAuthGuard, JwtRefreshAuthGuard } from '../../common/guards'
+import { UsersResolver } from './../users.resolver'
+import { UsersService } from './../users.service'
 
 describe('UsersResolver', () => {
   let usersResolver: UsersResolver

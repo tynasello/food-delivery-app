@@ -4,8 +4,8 @@ import { AuthGuard } from '@nestjs/passport'
 
 @Injectable()
 export class JwtRefreshAuthGuard extends AuthGuard('jwt-refresh') {
-    getRequest(context: ExecutionContext) {
-        const ctx = GqlExecutionContext.create(context)
-        return ctx.getContext().req
-    }
+  getRequest(context: ExecutionContext) {
+    const ctx = GqlExecutionContext.create(context)
+    return ctx.getContext().req
+  }
 }

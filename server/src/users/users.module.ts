@@ -1,9 +1,9 @@
+import { Module } from '@nestjs/common'
 import { CategoryService } from '../categories/category.service'
 import { FoodService } from './../food/food.service'
-import { Module } from '@nestjs/common'
-import { UsersService } from './users.service'
-import { UsersResolver } from './users.resolver'
 import { PrismaService } from './../prisma.service'
+import { UsersResolver } from './users.resolver'
+import { UsersService } from './users.service'
 
 @Module({
   providers: [

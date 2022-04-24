@@ -1,5 +1,5 @@
+import { Field, Int, ObjectType } from '@nestjs/graphql'
 import { Food } from '../../food/models/food.model'
-import { ObjectType, Field, Int } from '@nestjs/graphql'
 
 @ObjectType()
 export class User {
@@ -10,16 +10,10 @@ export class User {
   username: string
 
   @Field()
-  password: string
-
-  @Field()
   address: string
 
   @Field()
   cartCount: string
-
-  @Field()
-  rt: string
 
   @Field(() => [Food], { nullable: true, defaultValue: [] })
   cart?: Food[]

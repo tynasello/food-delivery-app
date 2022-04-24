@@ -9,7 +9,7 @@ describe('CategoryService', () => {
     category: {
       create: jest.fn(),
       findMany: jest.fn(),
-      findUnique: jest.fn((cateogryId) => true),
+      findUnique: jest.fn(() => true),
       delete: jest.fn(),
       update: jest.fn(),
     },

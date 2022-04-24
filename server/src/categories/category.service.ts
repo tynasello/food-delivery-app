@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from './../prisma.service'
 import { UserInputError } from 'apollo-server-express'
+import { PrismaService } from './../prisma.service'
 import { CreateCategoryDto } from './dto'
 
 @Injectable()

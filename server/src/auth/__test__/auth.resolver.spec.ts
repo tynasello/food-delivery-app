@@ -1,8 +1,8 @@
-import { JwtRefreshAuthGuard } from './../../common/guards/jwt-refresh-auth.guard'
+import { Test, TestingModule } from '@nestjs/testing'
 import { JwtAuthGuard } from './../../common/guards'
+import { JwtRefreshAuthGuard } from './../../common/guards/jwt-refresh-auth.guard'
 import { AuthResolver } from './../auth.resolver'
 import { AuthService } from './../auth.service'
-import { Test, TestingModule } from '@nestjs/testing'
 
 describe('AuthResolevr', () => {
   let authResolver: AuthResolver
@@ -87,7 +87,7 @@ describe('AuthResolevr', () => {
       const mockRefreshResult = { at: 'mock refreshed at' }
       authServiceMock.refreshTokens.mockReturnValueOnce(mockRefreshResult)
       // @ts-ignore
-      const refreshResult = authResolver.refreshTokens()
+      authResolver.refreshTokens()
       expect(authServiceMock.refreshTokens).toHaveBeenCalledTimes(1)
       expect(mockRefreshResult).toBe(mockRefreshResult)
     })

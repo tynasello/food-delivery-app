@@ -1,5 +1,5 @@
+import { Field, Float, InputType, Int } from '@nestjs/graphql'
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator'
-import { InputType, Field, Float, Int } from '@nestjs/graphql'
 
 @InputType()
 export class CreateFoodDto {

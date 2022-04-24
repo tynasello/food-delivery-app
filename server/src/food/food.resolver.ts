@@ -1,4 +1,4 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql'
+import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql'
 import { CreateFoodDto } from './dto'
 import { FoodService } from './food.service'
 import { Food } from './models'
