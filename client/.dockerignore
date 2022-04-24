@@ -1,0 +1,5 @@
+.git
+package-lock.json
+node_modules
+npm-debug
+docker-compose*.yml

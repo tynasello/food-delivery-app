@@ -1,0 +1,19 @@
+query GetUser {
+  getUser {
+    id
+    username
+    address
+    cartCount
+    cart {
+      id
+      name
+      category {
+        id
+        name
+      }
+      categoryId
+      price
+      restaurant
+    }
+  }
+}

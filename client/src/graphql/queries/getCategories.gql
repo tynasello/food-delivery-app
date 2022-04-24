@@ -1,0 +1,9 @@
+query GetCategories {
+  getCategories {
+    id
+    name
+    food {
+      name
+    }
+  }
+}

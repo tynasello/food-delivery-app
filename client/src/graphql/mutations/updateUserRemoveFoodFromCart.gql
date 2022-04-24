@@ -1,0 +1,11 @@
+mutation UpdateUserRemoveFoodFromCart($updateCartInput: UpdateUserCartDto!) {
+  updateUserRemoveFoodFromCart(updateCartInput: $updateCartInput) {
+    id
+    username
+    address
+    cartCount
+    cart {
+      name
+    }
+  }
+}

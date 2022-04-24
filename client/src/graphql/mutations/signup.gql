@@ -1,0 +1,13 @@
+mutation Signup($createUserInput: CreateUserDto!) {
+  signup(createUserInput: $createUserInput) {
+    id
+    username
+    address
+    cart {
+      name
+    }
+    cartCount
+    at
+    rt
+  }
+}

@@ -1,0 +1,9 @@
+mutation CreateCategory($createCategoryInput: CreateCategoryDto!) {
+  createCategory(createCategoryInput: $createCategoryInput) {
+    id
+    name
+    food {
+      name
+    }
+  }
+}

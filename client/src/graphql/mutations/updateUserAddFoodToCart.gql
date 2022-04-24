@@ -1,0 +1,11 @@
+mutation UpdateUserAddFoodToCart($updateCartInput: UpdateUserCartDto!) {
+  updateUserAddFoodToCart(updateCartInput: $updateCartInput) {
+    id
+    username
+    address
+    cartCount
+    cart {
+      name
+    }
+  }
+}
