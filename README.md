@@ -56,7 +56,7 @@ Create an account and sign in, or use the following user credentials: username: 
 
 <br>
 
-Frontend server hosted on GitHub pages and running at [https://github.com/Tynasello/food-delivery-app](https://github.com/Tynasello/food-delivery-app)
+Frontend server hosted on GitHub pages and running at [https://tynasello.github.io/food-delivery-app/](https://tynasello.github.io/food-delivery-app/)
 
 <br>
 

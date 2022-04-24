@@ -12,7 +12,7 @@ import { ThemeProvider } from '@mui/material'
 import { onError } from 'apollo-link-error'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AppRouter from './AppRouter'
 import reportWebVitals from './reportWebVitals'
 import GlobalStyle, { theme } from './theme/GlobalStyle'
@@ -106,12 +106,12 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <AppRouter />
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </React.StrictMode>
   </ApolloProvider>,
   document.getElementById('root')
