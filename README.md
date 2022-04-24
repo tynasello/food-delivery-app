@@ -1,12 +1,8 @@
-# Readme
+# Food Delivery App
 
 <br>
 
-## Food Delivery App
-
-<br>
-
-### server
+## Server
 
 `npm run start` or `docker-compose up —build` to start server. Go to [localhost:3001/graphql](http://localhost:3001/graphql) to query Apollo playground.
 
@@ -46,7 +42,7 @@ E2E tests done using Jest and supertest.
 <br>
 <br>
 
-### client
+## Client
 
 `npm run start` or `docker-compose up —build` to start react app at [localhost:3000](http://localhost:3000).
 
