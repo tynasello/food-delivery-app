@@ -52,7 +52,7 @@ E2E tests done using Jest and supertest.
 
 <br>
 
-Create an account and sign in, or use the following user credentials: username: Kevin, password: 87654321.
+Create an account and sign in, or use the following user credentials: username: Kevin, password: 87654321. When first logging in, the server will take a second to boot up. This is a limitation of Heroku's free subscription tier. See [here](https://stackoverflow.com/questions/2606190/why-are-my-basic-heroku-apps-taking-two-seconds-to-load#:~:text=Therefore%2C%20Heroku%20cuts%20down%20on,it%20takes%20time%20to%20reload.).
 
 <br>
 
