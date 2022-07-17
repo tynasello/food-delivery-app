@@ -2,6 +2,20 @@
 
 <br>
 
+• A food delivery app clone, allowing users to login, browse, and check out desired items.
+
+• GraphQL API written in TypeScript using NestJS framework, and Prisma ORM.
+
+• Application data stored in PostgreSQL database.
+
+• React TypeScript frontend using Apollo GraphQL.
+
+• JWT authentication protecting user/auth endpoints.
+
+• Unit and end-to-end tests written for backend using Jest and Supertest
+
+<br>
+
 ## Server
 
 `npm run start` or `docker-compose up —build` to start server. Go to [localhost:3001/graphql](http://localhost:3001/graphql) to query Apollo playground.
