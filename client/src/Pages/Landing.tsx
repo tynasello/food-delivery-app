@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import landing from '../assets/image/landing.png'
-import landingTiny from '../assets/image/landingTiny.png'
 import { AuthCard } from '../components/landing'
 import { Text } from '../components/shared/typography'
 import { useImageLazyLoader } from '../hooks'
@@ -17,7 +16,7 @@ const Landing = () => {
       <LandingBg
         style={{
           background: `linear-gradient(rgba(5, 5, 8, 0.8), rgba(9, 8, 13, 0.8)), url('${
-            src.includes('Tiny') ? landingTiny : landing
+            src.includes('Tiny') ? landing : landing
           }') top center / cover no-repeat fixed padding-box content-box`,
         }}
       ></LandingBg>

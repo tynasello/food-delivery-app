@@ -1,13 +1,10 @@
 import styled from 'styled-components'
-import checkoutDrawing from '../assets/image/checkoutDrawing.png'
 import { CheckoutCard } from '../components/checkout'
 import { StoreHeader } from '../components/shared/typography'
 
 const Checkout = () => {
   return (
     <>
-      <BgIllustration src={checkoutDrawing} />
-
       <CheckoutContainer>
         <StoreHeader inCheckout={true} />
         <CheckoutCard />
