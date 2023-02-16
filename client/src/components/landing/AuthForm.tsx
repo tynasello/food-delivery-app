@@ -12,6 +12,7 @@ import {
   signupInitialValues,
   signupSchema,
 } from './authForms'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 interface Props {
   method: 'signUp' | 'signIn'
@@ -27,6 +28,7 @@ const AuthForm = ({ method }: Props) => {
   const [signup] = useSignupMutation()
   const [login] = useLoginMutation()
   const [loginError, setLoginError] = useState<null | string>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [signupError, setSignupError] = useState<null | string>(null)
 
   const onSubmit = async (
@@ -34,6 +36,7 @@ const AuthForm = ({ method }: Props) => {
     { setSubmitting, resetForm }: FormikOnSubmitProps
   ) => {
     try {
+      setIsSubmitting(true)
       const { data } =
         method === 'signUp'
           ? await signup({
@@ -71,6 +74,7 @@ const AuthForm = ({ method }: Props) => {
           method === 'signUp' ? setSignupError(error.message) : setLoginError(error.message)
       }
     }
+    setIsSubmitting(false)
     setSubmitting(false)
   }
 
@@ -98,6 +102,13 @@ const AuthForm = ({ method }: Props) => {
         >
           {method === 'signUp' ? 'Create Account' : 'Login'}
         </ButtonCustom>
+        {isSubmitting && (
+          <>
+            <br />
+            <br />
+            <ClipLoader color={'#fff'} size={20} />
+          </>
+        )}
       </Form>
     </Formik>
   )

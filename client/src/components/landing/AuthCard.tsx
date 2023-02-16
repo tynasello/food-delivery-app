@@ -36,6 +36,9 @@ const AuthCard = () => {
       </CardHeader>
 
       <AuthForm method={method} />
+      <Text type="Error" sx={{ margin: '1rem' }}>
+        Backend is hosted on a free tier, please allow up to 30 seconds for server to start.
+      </Text>
     </AuthCardContainer>
   )
 }

@@ -19,15 +19,14 @@ const CheckoutContainer = styled.div`
   margin-bottom: 4rem;
 `
 
-const BgIllustration = styled.img`
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  right: 5vw;
-  transform: translate(0, -50%);
-  width: 50vw;
-  max-width: 900px;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
+// const BgIllustration = styled.img`
+//   z-index: -1;
+//   position: absolute;
+//   top: 50%;
+//   right: 5vw;
+//   transform: translate(0, -50%);
+//   width: 50vw;
+//   max-width: 900px;
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
