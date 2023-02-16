@@ -7,6 +7,13 @@
 - JWT authentication protecting user/auth endpoints.
 - Unit and end-to-end tests written for backend using Jest and Supertest
 
+
+<img width="70%" height="70%" alt="Screenshot 2023-02-15 at 10 54 05 PM" src="https://user-images.githubusercontent.com/63558019/219267706-574d2eaa-8e06-489b-ad82-bcaf1aca6aba.png">
+<img width="70%" height="70%"  alt="Screenshot 2023-02-15 at 11 17 24 PM" src="https://user-images.githubusercontent.com/63558019/219267713-8ef12d55-060f-41b3-92d0-7dd2ec470975.png">
+<img width="70%" height="70%"  alt="Screenshot 2023-02-15 at 11 17 34 PM" src="https://user-images.githubusercontent.com/63558019/219267718-fb563253-ed80-4600-8b30-884cc3b3d693.png" >
+
+
+
 ### Server
 
 `npm run start` or `docker-compose up —build` to start server. Go to [localhost:3001/graphql](http://localhost:3001/graphql) to query Apollo playground.
