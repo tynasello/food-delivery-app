@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/food-delivery-app/static/js/main.1dae96fc.js",
+    "main.js": "/food-delivery-app/static/js/main.31d961c6.js",
     "static/js/787.c4e7f8f9.chunk.js": "/food-delivery-app/static/js/787.c4e7f8f9.chunk.js",
     "static/media/sushi.png": "/food-delivery-app/static/media/sushi.8b09f03936a2338eda4b.png",
     "static/media/landing.png": "/food-delivery-app/static/media/landing.f95f808904fbba2ef788.png",
@@ -21,10 +21,10 @@
     "static/media/visa.png": "/food-delivery-app/static/media/visa.ad48d7b0a91867b73f82.png",
     "static/media/paypal.png": "/food-delivery-app/static/media/paypal.e964b0863597d14b6885.png",
     "index.html": "/food-delivery-app/index.html",
-    "main.1dae96fc.js.map": "/food-delivery-app/static/js/main.1dae96fc.js.map",
+    "main.31d961c6.js.map": "/food-delivery-app/static/js/main.31d961c6.js.map",
     "787.c4e7f8f9.chunk.js.map": "/food-delivery-app/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1dae96fc.js"
+    "static/js/main.31d961c6.js"
   ]
 }
